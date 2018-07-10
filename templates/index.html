@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Mail.ruvolution</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+	<!-- third-party stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/libs/bootstrap.min.css') }}">
+	<!-- internal stylesheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+	<header class="container page-header">
+		<h1 class="row justify-content-center">Be the first to join Mail.ruvolution:</h1>
+	</header>
+
+	<main class="container page-main text-center"></main>
+
+	<footer class="container page-footer">
+		<small class="row justify-content-center">
+			<span>Powered by <a href="https://d3js.org/" target="_blank">D3.js</a> and <a href="http://flask.pocoo.org/" target="_blank">Flask</a></span>
+		</small>
+		<small class="row justify-content-center">HSE University&copy2018</small>
+	</footer>
+
+	<!--third-party libs-->
+	<script src="{{ url_for('static', filename='scripts/libs/d3.min.js') }}"></script>
+	<!--internal js-->
+	<script src="{{ url_for('static', filename='scripts/ajax.js') }}"></script>
+	<script src="{{ url_for('static', filename='scripts/graph.js') }}"></script>
+</body>
+</html>
