@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<div class="labelName">The graph of <span class="colorText">Mail.ruvolution</span></div>
+{% endblock title %}
+
+{% block right %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+<div class="navbar-nav mr-auto"></div>
+
+<div class="navbar-nav">
+
+    <!-- <div class="rightSearch">Поиск</div> -->
+    <input title="login" type="text" placeholder="Поиск по графу"/>
+</div>
+{% endblock right %}
+
+{% block content %}
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="containerForm">
+		<form>
+      <div class="EmailTheme">
+			 <span>Hackaton Mail.ru</span>
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+			<div class="dws-input">
+				<span class="EmailAdress">corp@mail.ru</span>
+        <span class="EmailDate">14.07.2018</span>
+			</div>
+      <hr style="width: 95%; color: #ffffff;">
+      <div class="EmailContent">
+        <span>
+          Some important data!
+        </span>
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+      <div class="response">
+      <button type="button" class="dws-submit-right" onclick="changeTemplate()">Ответить</button>
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+		</form>
+  </div>
+</div>
+
+<div id="responseSideNav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeResponseSideNav()">&times;</a>
+  <div class="containerForm">
+    <form>
+      <div class="EmailTheme">
+       <span>Hackaton Mail.ru</span>
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+      <div class="dws-input">
+        <span class="EmailAdress">corp@mail.ru</span>
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+      <div class="EmailContent">
+        <input type="text" class="newEmailContent" name="textMessage">
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+      <div class="response">
+      <button class="dws-submit-right">Отправить</button>
+      </div>
+      <hr style="width: 95%; color: #ffffff;">
+    </form>
+  </div>
+</div>
+
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "600px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+function changeTemplate() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("responseSideNav").style.width = "600px";
+}
+
+function closeResponseSideNav() {
+  document.getElementById("responseSideNav").style.width = "0";
+}
+</script>
+
+	<main id="main" class="container page-main text-center"></main>
+
+	<!--third-party libs-->
+	<script src="{{ url_for('static', filename='scripts/libs/d3.min.js') }}"></script>
+	<!--internal js-->
+	<script src="{{ url_for('static', filename='scripts/graph.js') }}"></script>
+
+{% endblock content %}
