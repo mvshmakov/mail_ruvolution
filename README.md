@@ -12,3 +12,8 @@
 ## Ресурсы:
 #### NLTK образец: https://www.ibm.com/developerworks/ru/library/os-pythonnltk/
 #### D3.js: https://bl.ocks.org/mbostock/1062288
+#### http://mbostock.github.io/d3/talk/20111116/force-collapsible.html
+#### https://stackoverflow.com/questions/11102795/d3-node-labeling
+
+#### http://www.yasiv.com/youtube#/Search?q=write%20in%20c
+#### http://www.wineandcheesemap.com/

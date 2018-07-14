@@ -1,0 +1,9 @@
+{
+ "name": "Sport",
+ "children": [
+  {"name": "Football", "size": 3938},
+  {"name": "Basketball", "size": 3812},
+  {"name": "Handball", "size": 6714},
+  {"name": "Ping-pong", "size": 743}
+ ]
+}
