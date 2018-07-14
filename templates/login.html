@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+<div class="labelName">Be the first to join <span class="colorText">Mail.ruvolution</span></div>
+{% endblock title %}
+{% block content %}
+
+<div class="containerForm">
+	<div class="nc-form">
+            <div class="logoYourMail">
+				<img src="../static/img/logoYourMail.png" height="80px">
+			</div>
+            <form name="login" method="post" class="nc-form__main">
+            	<div class="nc-form__main-login">
+              		<input title="login" type="text" class="nc-form__input" placeholder="Имя ящика"/>
+		        	<select title="select" class="optionMail">
+    	    	        <option value="mail" class="nc-select_option">@mail.ru</option>
+	            	    <option value="inbox" class="nc-select_option">@inbox.ru</option>
+                	 	<option value="list" class="nc-select_option">@list.ru</option>
+                 		<option value="bk" class="nc-select_option">@bk.ru</option>
+              		</select>
+            	</div>
+            	<div class="nc-form__main-password">
+                	<input title="password" type="password" class="nc-form__input" placeholder="Пароль"/>
+                	<button class="dws-submit">Войти</button>
+            	</div>
+        	</form>
+    </div>
+</div>
+{% endblock content %}
