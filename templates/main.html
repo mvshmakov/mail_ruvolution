@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-<div class="labelName">The graph of <span class="colorText">Mail.ruvolution</span></div>
+<div class="labelName">The graph of Mail<span class="colorText">.ruvolution</span></div>
 {% endblock title %}
 
 {% block right %}
@@ -10,9 +10,8 @@
 <div class="navbar-nav mr-auto"></div>
 
 <div class="navbar-nav">
-
     <!-- <div class="rightSearch">Поиск</div> -->
-    <input title="login" type="text" placeholder="Поиск по графу"/>
+    <input autofocus id="autocomplete" title="login" type="text" placeholder="Поиск по графу"/>
 </div>
 {% endblock right %}
 
@@ -26,8 +25,8 @@
       </div>
       <hr style="width: 95%; color: #ffffff;">
 			<div class="dws-input">
-				<span class="EmailAdress">corp@mail.ru</span>
-        <span class="EmailDate">14.07.2018</span>
+				<span class="EmailAdress">От: corp@mail.ru </span>
+        <span class="EmailDate">Дата: 14.07.2018</span>
 			</div>
       <hr style="width: 95%; color: #ffffff;">
       <div class="EmailContent">
@@ -53,11 +52,12 @@
       </div>
       <hr style="width: 95%; color: #ffffff;">
       <div class="dws-input">
-        <span class="EmailAdress">corp@mail.ru</span>
+        <span class="EmailAdress">Кому: corp@mail.ru</span>
       </div>
       <hr style="width: 95%; color: #ffffff;">
-      <div class="EmailContent">
-        <input type="text" class="newEmailContent" name="textMessage">
+      <div class="newEmailContent">
+        <!-- <input id="newEmailText" type="text" name="textMessage"> -->
+        <p><textarea name="sentEmailText" style="width: 465px; min-height: 70px;"></textarea></p>
       </div>
       <hr style="width: 95%; color: #ffffff;">
       <div class="response">
@@ -67,8 +67,6 @@
     </form>
   </div>
 </div>
-
-
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
@@ -82,7 +80,7 @@ function closeNav() {
 }
 
 function changeTemplate() {
-  document.getElementById("mySidenav").style.width = "0";
+  closeNav();
   document.getElementById("responseSideNav").style.width = "600px";
 }
 
@@ -97,5 +95,23 @@ function closeResponseSideNav() {
 	<script src="{{ url_for('static', filename='scripts/libs/d3.min.js') }}"></script>
 	<!--internal js-->
 	<script src="{{ url_for('static', filename='scripts/graph.js') }}"></script>
+ 
+ 
+<script>
 
+var arr= ["ActionScript", "AppleScript",
+      "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy",
+      "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"]
+
+$('#autocomplete').autocomplete({
+  lookup: arr
+});
+</script>
 {% endblock content %}
+{% block footer %}
+<footer class="container page-footer">
+    <div class="row justify-content-center" style="margin-top: 10px; margin-bottom: 10px;">
+        <small class="text-muted">Geek-S © 2018</small>
+    </div>
+</footer>
+{% endblock footer %}

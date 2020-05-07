@@ -79,8 +79,8 @@ window.onload = function() {
 
     function color(d) {
       return d._children ? "#3182bd" // collapsed package
-          : d.children ? "#c6dbef" // expanded package
-          : "#fd8d3c"; // leaf node
+          : d.children ? "#168de2" // expanded package
+          : "#ffa930"; // leaf node
     }
 
     // Toggle children on click.

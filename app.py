@@ -2,7 +2,9 @@
 from flask import Flask, request, render_template, url_for, json
 app = Flask(__name__)
 
-dataForSearch = ['hello','world','python','hello world']
+dataForSearch = ["ActionScript", "AppleScript",
+      "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy",
+      "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"]
 
 @app.route("/")
 def index():
